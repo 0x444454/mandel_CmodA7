@@ -8,7 +8,8 @@
 
 Open the ```mandel_CmodA7.xpr``` project file.
 
-NOTE: If you have a Cmod A7-15T (instead of the A7-35T), you need to set ```NCORES = 7``` in the fb_scanline_writer.sv file, or you will run out of DSPs.  
+NOTE: By default, the project is configured for the Digilent Cmod A7-35T board.  
+If instead you have a Cmod A7-15T, you need to set ```NCORES = 7``` in the fb_scanline_writer.sv file, or you will run out of DSPs.  
 
 ## Build
 In the "Flow Navigator": "Program and Device" -> "Generate Bitstream".
