@@ -39,6 +39,8 @@ Press RST (button 3) to reset zoom.
 ![screenshots](media/screenshot.jpg)
 
 # SCHEMATIC
+WARNING: Do not use pin 24 ("VU") of the Cmod A7 board to power components. Voltage on that pin varies depending on power source.  
+
 
 ![screenshots](media/mandel_CmodA7-schematics.jpg)
 
