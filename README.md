@@ -1,5 +1,5 @@
 # mandel_CmodA7
-## A fast (1.5 GigaIters/s) interactive Mandelbrot generator for the Digilent Cmod A7 FPGA board (XC7A35T)
+## A fast (1.5 GigaIters/s) interactive Mandelbrot generator for the Digilent Cmod A7 FPGA board
 
 Features:
 - HDMI output: 960x544 @ 60Hz, 24-bit colors.
