@@ -38,7 +38,7 @@ Press RST (button 3) to reset zoom.
 
 ![screenshots](media/screenshot.jpg)
 
-# SCHEMATIC
+# SCHEMATICS
 
 **WARNING**: Do __not__ use pin 24 ("VU") of the Cmod A7 board to power components.  
 Voltage on that pin varies depending on power source (e.g. 5V if using USB power).  
