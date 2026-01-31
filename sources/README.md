@@ -4,7 +4,7 @@
 
 - Xilinx Vivado (tested on version 2025.2).
 
-## Select the build type (if needed)
+## Open the project file
 
 Open the ```mandel_CmodA7.xpr``` project file.
 
