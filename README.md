@@ -100,7 +100,7 @@ We also use almost all external SRAM for the framebuffer (960x544 = 522240 bytes
 
 ### Is my Cmod A7-15T supported ?
 
-I only have a Cmod A7-35T, but the 15T should work if decreasing the number of Mandel cores to 7. This is because the 15T has half the DSPs of the 35T.
+I only have a Cmod A7-35T, but the 15T should work after decreasing the number of Mandel cores to 7. This is because the 15T has half the DSPs of the 35T.
 See [build instructions](sources/README.md) for more info.
 
 ### Why resolution is only to 960x544 ?
