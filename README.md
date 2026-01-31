@@ -59,7 +59,7 @@ NOTE: The joystick is a simple switch-to-ground type. Serial (I2C) controllers a
 
 The default number of max iterations is 128, but the user can interactively change them in the range [16..4095].  
 
-NOTE: The limited amount of SRAM (512 KB) in the Cmod A7 board only allows for a 960x544 (qHD) framebuffer.
+NOTE: The limited amount of SRAM (512 KB) in the Cmod A7 board only allows for a 960x544 framebuffer.
 NOTE: The simple coloring algorithm maps the lowest 8-bits of a pixel iterations to a palette of 256 colors.
 
 # ALGORITHM
@@ -95,6 +95,25 @@ This is on a Xilinx XC7A35T. Notice how we use all 90 (100%) DSP48E1 blocks and 
 We also use almost all external SRAM for the framebuffer (960x544 = 522240 bytes out of 524288).
 
 ![screenshots](media/mandel_CmodA7-FPGA_summary.png)
+
+# FAQ
+
+###Is my Cmod A7-15T supported ?
+
+I only have a Cmod A7-35T, but the 15T should work if decreasing the number of Mandel cores to 7. This is because the 15T has half the DSPs of the 35T.
+See [build instructions](sources/README.md) for more info.
+
+###Why resolution is only to 960x544 ?
+
+The Cmod A7 board only has 512 KB (524288 bytes) of SRAM. We use one byte per pixel and fill it almost completely because 960x544 = 522240.  
+Note that height is 544 instead of 540 (1080/2), otherwise many displays will think we are using 1080i (interlaced).
+
+I tried upscaling to 1920x1080 but my displays won't sync. I think this could be due to limitations of the Cmod A7 (or a bug in the upscaler :-).
+So I decided to keep it simple.  
+
+###I have a Basys 3 FPGA board. Will this work ?
+
+No, but this will: https://github.com/0x444454/mandel_basys3
 
 
 # LICENSE
