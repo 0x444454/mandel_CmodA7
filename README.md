@@ -1,9 +1,6 @@
 # mandel_CmodA7
 ## A fast (1.5 GigaIters/s) interactive generator for the Digilent Cmod A7 FPGA board (XC7A35T)
 
-# mandel_basys3
-## A fast (1.5 GigaIters/s) interactive Mandelbrot generator for the Digilent Basys3 FPGA trainer board.
-
 Features:
 - HDMI output: 960x544 @ 60Hz, 24-bit colors.
 - Interactive controls via joystick board.
@@ -39,6 +36,12 @@ Press RST (button 3) to reset zoom.
 - If Center button is NOT pressed: Display current calculation line in hex [0x00..0xF0].
 - If Center button is pressed: Display current max_iters per pixel in hex [0x010..0xFFF].
 
+![screenshots](media/screenshot.jpg)
+
+# SCHEMATIC
+
+![screenshots](media/mandel_CmodA7-schematics.jpg)
+
 # SUPPORTED RESOLUTIONS
 - 960x544, RGB 8:8:8.
 
@@ -68,7 +71,7 @@ The current implementation uses Q3.22 (25 bits total).
 The Mandelbrot set is contained in a circle with radius 2. However, during calculation, numbers greater than 2 are encountered, depending on the point being calculated.  
 Here is the maximum magnitude reached for each point during the calculation:  
 
-![screenshots](media/max_values.jpg)
+# SUPPORTED RESOLUTIONS
 
 Q3.22 (25 bits) is the best compromise between max-zoom and speed for the Artix7 FPGA.  
 We use 25-bit numbers to maximize usage of DSP48E1 resources in the Artix7.  
