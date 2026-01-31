@@ -103,13 +103,21 @@ We also use almost all external SRAM for the framebuffer (960x544 = 522240 bytes
 I only have a Cmod A7-35T, but the 15T should work after decreasing the number of Mandel cores to 7. This is because the 15T has half the DSPs of the 35T.
 See [build instructions](sources/README.md) for more info.
 
-### Why resolution is only to 960x544 ?
+### Why resolution is only 960x544 ?
 
 The Cmod A7 board only has 512 KB (524288 bytes) of SRAM. We use one byte per pixel and fill it almost completely because 960x544 = 522240.  
 Note that height is 544 instead of 540 (1080/2), otherwise many displays will think we are using 1080i (interlaced).
 
 I tried upscaling to 1920x1080 but my displays won't sync. I think this could be due to limitations of the Cmod A7 (or a bug in the upscaler :-).
 So I decided to keep it simple.  
+
+### Why only 256 colors, even if 4096 iters are supported ?
+
+Same reason as above. We only have 512 KB for the framebuffer, so we only store the lowest 8 bits of the pixel iterations.
+
+### Can I customize the palette ?
+
+Sure. Change it here: [palette_rom_256x12.sv](sources/src/palette_rom_256x12.sv)
 
 ### I have a Basys 3 FPGA board. Will this work ?
 
