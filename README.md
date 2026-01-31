@@ -39,8 +39,19 @@ Press RST (button 3) to reset zoom.
 ![screenshots](media/screenshot.jpg)
 
 # SCHEMATIC
-WARNING: Do not use pin 24 ("VU") of the Cmod A7 board to power components. Voltage on that pin varies depending on power source.  
 
+**WARNING**: Do __not__ use pin 24 ("VU") of the Cmod A7 board to power components.  
+Voltage on that pin varies depending on power source (e.g. 5V if using USB power).  
+
+**HDMI wiring**: Although we use a PMOD-DVI adapter, we cannot use the Cmod A7 PMOD connector.  
+The reason is we need 4 differential pairs and direct connection to FPGA (no resistors), but the PMOD connector in the Cmod A7 has 200 Ω resistors on data pins, and only 3 differential pairs, so we need to wire HDMI on pins 26-33 of the board.  
+Keep wires short and twist each p and n pair (see photo above).  
+This PMOD adapter needs 3.3V, so we use 3V3 from the PMOD connector, and GND from PMOD (or pin 26 of the board, as you prefer).  
+
+**Joystick wiring**: Connect a digital joystick board to PMOD.  
+You need at least the 4 directions, and the main action button (here called "SET" button).  
+A 3 button joystick allows more interactions (see [Controls(#CONTROLS)).  
+NOTE: The joystick is a simple switch-to-ground type. Serial (I2C) controllers are __not__ supported.  
 
 ![screenshots](media/mandel_CmodA7-schematics.jpg)
 
@@ -73,7 +84,7 @@ The current implementation uses Q3.22 (25 bits total).
 The Mandelbrot set is contained in a circle with radius 2. However, during calculation, numbers greater than 2 are encountered, depending on the point being calculated.  
 Here is the maximum magnitude reached for each point during the calculation:  
 
-# SUPPORTED RESOLUTIONS
+![screenshots](media/max_values.jpg)
 
 Q3.22 (25 bits) is the best compromise between max-zoom and speed for the Artix7 FPGA.  
 We use 25-bit numbers to maximize usage of DSP48E1 resources in the Artix7.  
