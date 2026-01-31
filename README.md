@@ -31,10 +31,9 @@ Stick-press (button 2) to cycle color palette.
 
 Press RST (button 3) to reset zoom.  
 
-
-4-Digit LED display:
-- If Center button is NOT pressed: Display current calculation line in hex [0x00..0xF0].
-- If Center button is pressed: Display current max_iters per pixel in hex [0x010..0xFFF].
+Multicolor **LED**:
+- Red = Calculating
+- Green = Idle
 
 ![screenshots](media/screenshot.jpg)
 
