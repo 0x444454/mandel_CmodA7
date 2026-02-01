@@ -98,6 +98,11 @@ We also use almost all external SRAM for the framebuffer (960x544 = 522240 bytes
 
 # FAQ
 
+### I did everything as you said, but get no valid signal on my display
+
+Make sure you twisted each of the 4 HDMI pairs together (i.e. P and N signals).  
+Make it 0.5 to 1 twist per cm (1.25 to 2.5 twists per inch).
+
 ### Is my Cmod A7-15T supported ?
 
 I only have a Cmod A7-35T, but the 15T should work after decreasing the number of Mandel cores to 7. This is because the 15T has half the DSPs of the 35T.
