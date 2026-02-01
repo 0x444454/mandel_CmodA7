@@ -101,8 +101,10 @@ We also use almost all external SRAM for the framebuffer (960x544 = 522240 bytes
 ### I did everything you said, but get no valid signal or no sync on my display
 
 - Make sure you twisted each of the 4 HDMI pairs together (i.e. P and N signals). Make it 0.5 to 1 twist per cm (1.25 to 2.5 twists per inch).
-- Use shorter HDMI wires (see pic of my setup), and make sure they are __all the same length__.
-- Try with a different display. Unfortunately, I have a limited amount of displays to test.
+- Use shorter HDMI wires from FPGA pins to PMOD adapter (see pic of my setup), and make sure they are __all the same length__.
+- Use shorter HDMI cable from adapter to display. I use a 1 meter (3 feet) cable.
+- Remove possible sources of electromagnetic interference around our "contraption" :-)
+- Try with a different display. Unfortunately, I have a limited amount of displays to test (3 out of 3 are working).
 
 ### Is my Cmod A7-15T supported ?
 
