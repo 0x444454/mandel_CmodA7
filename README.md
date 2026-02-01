@@ -49,7 +49,7 @@ This PMOD adapter needs 3.3V, so we use 3V3 from the PMOD connector, and GND fro
 
 **Joystick wiring**: Connect a digital joystick board to PMOD.  
 You need at least the 4 directions, and the main action button (here called "SET" button).  
-A 3 button joystick allows more interactions (see [Controls(#CONTROLS)).  
+A 3 button joystick allows more interactions (see [Controls](#CONTROLS)).  
 NOTE: The joystick is a simple switch-to-ground type. Serial (I2C) controllers are __not__ supported.  
 
 ![screenshots](media/mandel_CmodA7-schematics.jpg)
@@ -101,7 +101,7 @@ We also use almost all external SRAM for the framebuffer (960x544 = 522240 bytes
 ### I did everything you said, but get no valid signal or no sync on my display
 
 - Make sure you are using the right HDMI adapter. Some of them are made for a different board, and do not have the right resistors for the Cmod A7.
-- Review [Schematics(#SCHEMATICS))].
+- Review [Schematics](#SCHEMATICS)).
 - Make sure you __twisted__ each of the 4 HDMI pairs together (i.e. P and N signals). Make it 0.5 to 1 twist per cm (1.25 to 2.5 twists per inch).
 - Use shorter HDMI wires from FPGA pins to PMOD adapter (see pic of my setup), and make sure they are __all the same length__.
 - Use shorter HDMI cable from adapter to display. I use a 1 meter (3 feet) cable.
