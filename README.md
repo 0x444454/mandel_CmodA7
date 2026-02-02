@@ -96,7 +96,7 @@ We also use almost all external SRAM for the framebuffer (960x544 = 522240 bytes
 
 ![screenshots](media/mandel_CmodA7-FPGA_summary.png)
 
-# High-level arch
+# HI-LEVEL ARCH
 
 ![screenshots](media/flow.svg)
 
