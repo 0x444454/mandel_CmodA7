@@ -102,7 +102,7 @@ We also use almost all external SRAM for the framebuffer (960x544 = 522240 bytes
 
 # PROBLEMS / FAQ
 
-### I did everything you said, but get no valid signal or no sync on my display
+### I get no valid signal or no sync on my display
 
 - Make sure you are using the right HDMI adapter. Some of them are made for a different board, and do not have the right resistors for the Cmod A7.
 - Review [Schematics](#SCHEMATICS).
